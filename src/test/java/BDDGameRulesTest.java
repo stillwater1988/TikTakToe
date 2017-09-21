@@ -29,7 +29,95 @@ public class BDDGameRulesTest {
     }
 
     @Test
-    public void testPlayerXWinsV() {
+    public void testPlayerXWinsV1() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsV2() {
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 1, 1);
+        game.move(Player.NAME_X, 2, 2);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsV3() {
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsH1() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsH2() {
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 1);
+        game.move(Player.NAME_X, 2, 2);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 3, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsH3() {
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsD1() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerXWinsD2() {
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 2);
+        game.move(Player.NAME_O, 1, 1);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(Player.NAME_X, game.getWiner());
+    }
+
+    @Test
+    public void testPlayerOWinsH() {
         game.move(Player.NAME_X, 1, 1);
         game.move(Player.NAME_O, 2, 1);
         game.move(Player.NAME_X, 1, 2);
