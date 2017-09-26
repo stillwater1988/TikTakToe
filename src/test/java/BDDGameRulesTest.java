@@ -202,7 +202,23 @@ public class BDDGameRulesTest {
 
 
     @Test
-    public void testDraw() {
+    public void testDraw1() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 3, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+}
+
+    @Test
+    public void testDraw2() {
         game.move(Player.NAME_X, 1, 1);
         game.move(Player.NAME_O, 2, 2);
         game.move(Player.NAME_X, 1, 2);
