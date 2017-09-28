@@ -205,29 +205,388 @@ public class BDDGameRulesTest {
     public void testDraw1() {
         game.move(Player.NAME_X, 1, 1);
         game.move(Player.NAME_O, 2, 2);
-        game.move(Player.NAME_X, 1, 2);
-        game.move(Player.NAME_O, 1, 3);
-        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_X, 3, 3);
         game.move(Player.NAME_O, 2, 1);
         game.move(Player.NAME_X, 2, 3);
-        game.move(Player.NAME_O, 3, 3);
-        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 3, 2);
+        game.move(Player.NAME_X, 1, 2);
         Assertions.assertEquals(true, game.isOver());
         Assertions.assertEquals(game.NONE, game.getWinner());
     }
-}
 
     @Test
     public void testDraw2() {
         game.move(Player.NAME_X, 1, 1);
         game.move(Player.NAME_O, 2, 2);
-        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
         game.move(Player.NAME_O, 1, 3);
         game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw3() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
         game.move(Player.NAME_O, 2, 1);
         game.move(Player.NAME_X, 2, 3);
         game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+        }
+
+    @Test
+    public void testDraw4() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
         game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+        }
+
+    @Test
+    public void testDraw5() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw6() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 3);
+        game.move(Player.NAME_O, 2, 3);
+        game.move(Player.NAME_X, 2, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw7() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 2, 3);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+        }
+
+    @Test
+    public void testDraw8() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw9() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw10() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 1, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw11() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 2, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw12() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw13() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw14() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw15() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 2, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw16() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 1);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw17() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw18() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw19() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw20() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 1, 2);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw21() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 2, 3);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw22() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 2, 1);
+        game.move(Player.NAME_O, 3, 1);
+        game.move(Player.NAME_X, 1, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 2, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw23() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw24() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 1, 2);
+        game.move(Player.NAME_X, 3, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw25() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 2);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 1, 3);
+        game.move(Player.NAME_X, 3, 3);
+        Assertions.assertEquals(true, game.isOver());
+        Assertions.assertEquals(game.NONE, game.getWinner());
+    }
+
+    @Test
+    public void testDraw26() {
+        game.move(Player.NAME_X, 1, 1);
+        game.move(Player.NAME_O, 2, 2);
+        game.move(Player.NAME_X, 3, 1);
+        game.move(Player.NAME_O, 2, 1);
+        game.move(Player.NAME_X, 2, 3);
+        game.move(Player.NAME_O, 3, 2);
+        game.move(Player.NAME_X, 1, 2);
+        game.move(Player.NAME_O, 3, 3);
+        game.move(Player.NAME_X, 1, 3);
         Assertions.assertEquals(true, game.isOver());
         Assertions.assertEquals(game.NONE, game.getWinner());
     }
