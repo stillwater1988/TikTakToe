@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,11 +32,12 @@ public class TicTacToeBoard {
         Map<Integer, String> row1 = getBoard().get(1);
         Map<Integer, String> row2 = getBoard().get(2);
         Map<Integer, String> row3 = getBoard().get(3);
-        String board = row1.get(1) + "|" + row1.get(2) + "|" + row1.get(1) + "\n"
+        String board = row1.get(1) + "|" + row1.get(2) + "|" + row1.get(3) + "\n"
             + "-+-+-\n"
-            + row2.get(1) + "|" + row2.get(2) + "|" + row2.get(1) + "\n"
+            + row2.get(1) + "|" + row2.get(2) + "|" + row2.get(3) + "\n"
             + "-+-+-\n"
-            + row3.get(1) + "|" + row3.get(2) + "|" + row3.get(1) + "\n";
+            + row3.get(1) + "|" + row3.get(2) + "|" + row3.get(3) + "\n";
+        System.out.println(board);
         return board;
     }
 
